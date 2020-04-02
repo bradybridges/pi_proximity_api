@@ -1,21 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const nodemailer = require('nodemailer');
-
-const transporter = nodemailer.createTransport({
-  service: 'yahoo',
-  host: 'mail.yahoo.com',
-  port: 465,
-  secure: false,
-  auth: {
-    user: 'bradybridges@yahoo.com',
-    pass: 'gooser1235',
-  },
-  tls: {
-    rejectUnauthorized: false
-  }
-});
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pi Proximity API';
